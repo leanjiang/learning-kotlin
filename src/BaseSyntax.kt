@@ -16,6 +16,48 @@ fun printSum(a: Int, b: Int): Unit {
 }
 
 //Unit can be omitted.
-fun printSum1(a: Int,b: Int){
-    print(a+b)
+fun printSum1(a: Int, b: Int) {
+    print(a + b)
 }
+
+//using string templates
+fun main(args: Array<String>) {
+    if (args.size == 0) return
+    println("First argument: ${args[0]}")
+}
+
+//Using condition expressions
+fun max(x: Int, y: Int) : Int {
+    if (x > y)
+        return x
+    else
+        return y
+}
+
+//inline version
+fun max1(x: Int, y: Int) = if (x > y) x else y
+
+fun forLoop(args: Array<String>){
+    for(arg in args)
+        print(arg)
+    //indices means arrays index.
+    for(i in args.indices)
+        print(args[i])
+}
+
+fun whileLoop(args: Array<String>){
+    var i = 0
+    while(i < args.size)
+        print(args[i++])
+}
+
+fun whenExp(obj: Any){
+    when(obj){
+        1   -> print("one")
+        "Hello" -> print("Greeting")
+        is Long -> print("Long")
+        !is String -> print("Not a string")
+        else -> print("unknown")
+    }
+}
+

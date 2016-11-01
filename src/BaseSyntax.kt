@@ -16,6 +16,28 @@ fun printSum(a: Int, b: Int): Unit {
 }
 
 //Unit can be omitted.
-fun printSum1(a: Int,b: Int){
-    print(a+b)
+fun printSum1(a: Int, b: Int) {
+    print(a + b)
 }
+
+//read-only local variable
+fun variable(): Unit {
+    //read-only
+    val a: Int = 1
+    //mutable
+    var b: Float = 1.0F
+    b = 2.0F
+}
+
+// when expressions.
+fun cases(obj: Any) {
+    when (obj) {
+        1 -> print("one")
+        "Hello" -> print("Greeting")
+        is Long -> print("Long")
+        !is String -> print("is not String")
+        else -> print("unknown")
+    }
+}
+
+
